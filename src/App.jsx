@@ -114,7 +114,6 @@ function Header() {
       </nav>
     </header>
   );
-  //camel case className
 }
 
 function Logo() {
@@ -188,14 +187,6 @@ function Footer() {
     alignItems: "center",
     gap: "2.4rem",
   };
-  const hour = new Date().getHours();
-  const openHour = 10;
-  const closeHour = 22;
-  const isOpen = (hour) => openHour && hour <= closeHour;
-  console.log(isOpen);
-  //console.log(hour);
-  //if (hour >= openHour && hour <= closeHour) alert("we're open");
-  //else alert("we're closed");
 
   return <div></div>;
 }
