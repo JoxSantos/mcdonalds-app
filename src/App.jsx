@@ -15,9 +15,12 @@ export default App;
 
 function Pizza(props) {
   return (
-    <div className="pizza">
+    <div className="mcdo_option">
       <div className="mcdo_logo">
-        <img src={props.photoName} alt={props.name} />
+        <div className="parentContainer">
+          <img src={props.photoName} alt={props.name} />
+          <p className="center-text">{props.optionName}</p>
+        </div>
       </div>
     </div>
   );
@@ -136,36 +139,42 @@ function Menu() {
         <button className="carousel_indicator"></button>
       </div>
 
-      <div className="pizzas">
+      <div className="mcdo-option-grid">
         <Pizza
           name="Focaccia"
           ingredients="Bread with italian olive oil and rosemary"
           photoName="mcdo_icon/Deliver1.jpeg"
+          optionName="McDelivery"
         />
         <Pizza
           name="Pizza Margherita"
           ingredients="Tomato and mozarella"
           photoName="mcdo_icon/Deliver2.jpeg"
+          optionName="NXTGEN"
         />
         <Pizza
           name="Pizza Spinaci"
           ingredients="Tomato, mozarella, spinach, and ricotta cheese"
           photoName="mcdo_icon/Deliver3.jpg"
+          optionName="Careers"
         />
         <Pizza
           name="Pizza Funghi"
           ingredients="Tomato, mozarella, mushrooms, and onion"
           photoName="mcdo_icon/Deliver4.jpg"
+          optionName="Family Activities"
         />
         <Pizza
           name="Pizza Salamino"
           ingredients="Tomato, mozarella, and pepperoni"
           photoName="mcdo_icon/Deliver5.jpeg"
+          optionName="Download the McDelivery PH App"
         />
         <Pizza
           name="Pizza Prosciutto"
           ingredients="Tomato, mozarella, ham, aragula, and burrata cheese"
           photoName="mcdo_icon/Deliver6.jpeg"
+          optionName="Charity"
         />
       </div>
     </div>

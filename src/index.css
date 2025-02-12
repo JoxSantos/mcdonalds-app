@@ -169,29 +169,31 @@ header .navbar {
 }
 
 /*align images left and right */
-.pizzas {
+.mcdo-option-grid {
   list-style: none;
   display: grid;
   flex-direction: row;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 4.8rem;
 }
 
 /*pizza name and desc right of img */
-.pizza {
+.mcdo_option {
   display: flex;
   gap: 3.2rem;
 }
 
 /* image size of change width */
-.pizza img {
+.mcdo_option img {
   width: 25rem;
   aspect-ratio: 1;
   align-self: start;
+  border-radius: 25px;
+  margin: 0px 10px 0px 10px;
 }
 
 /* spacing???*/
-.pizza div {
+.mcdo_option div {
   display: flex;
 
   gap: 0.8rem;
@@ -199,11 +201,33 @@ header .navbar {
 }
 
 /* font only*/
-.pizza h3 {
+.mcdo_option h3 {
   font-size: 2rem;
   font-weight: 400;
 }
 
+.center-text {
+  position: absolute;
+
+  top: 76%;
+  left: 50%;
+  font-size: 18px;
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 220px;
+  white-space: normal;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.parentContainer {
+  position: relative;
+  text-align: center;
+  color: white;
+  width: 100%;
+  max-width: 100%;
+}
 /* font descriptions*/
 
 /* font again of desc*/
