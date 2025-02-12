@@ -1,3 +1,36 @@
+const mcdoData = [
+  {
+    name: "Focaccia",
+    photoName: "mcdo_icon/Deliver1.jpeg",
+    optionName: "McDelivery",
+  },
+  {
+    name: "Pizza Margherita",
+    photoName: "mcdo_icon/Deliver2.jpeg",
+    optionName: "NXTGEN",
+  },
+  {
+    name: "Pizza Spinaci",
+    photoName: "mcdo_icon/Deliver3.jpg",
+    optionName: "Careers",
+  },
+  {
+    name: "Pizza Funghi",
+    photoName: "mcdo_icon/Deliver4.jpg",
+    optionName: "Family Activities",
+  },
+  {
+    name: "Pizza",
+    photoName: "mcdo_icon/Deliver5.jpeg",
+    optionName: "Download the McDelivery PH App",
+  },
+  {
+    name: "Funghi",
+    photoName: "mcdo_icon/Deliver6.jpeg",
+    optionName: "Charity",
+  },
+];
+
 function App() {
   //const x = "gab";
   //rfc
@@ -18,8 +51,8 @@ function Pizza(props) {
     <div className="mcdo_option">
       <div className="mcdo_logo">
         <div className="parentContainer">
-          <img src={props.photoName} alt={props.name} />
-          <p className="center-text">{props.optionName}</p>
+          <img src={props.mcdoDatObj.photoName} alt={props.mcdoDatObj.name} />
+          <p className="center-text">{props.mcdoDatObj.optionName}</p>
         </div>
       </div>
     </div>
@@ -140,42 +173,9 @@ function Menu() {
       </div>
 
       <div className="mcdo-option-grid">
-        <Pizza
-          name="Focaccia"
-          ingredients="Bread with italian olive oil and rosemary"
-          photoName="mcdo_icon/Deliver1.jpeg"
-          optionName="McDelivery"
-        />
-        <Pizza
-          name="Pizza Margherita"
-          ingredients="Tomato and mozarella"
-          photoName="mcdo_icon/Deliver2.jpeg"
-          optionName="NXTGEN"
-        />
-        <Pizza
-          name="Pizza Spinaci"
-          ingredients="Tomato, mozarella, spinach, and ricotta cheese"
-          photoName="mcdo_icon/Deliver3.jpg"
-          optionName="Careers"
-        />
-        <Pizza
-          name="Pizza Funghi"
-          ingredients="Tomato, mozarella, mushrooms, and onion"
-          photoName="mcdo_icon/Deliver4.jpg"
-          optionName="Family Activities"
-        />
-        <Pizza
-          name="Pizza Salamino"
-          ingredients="Tomato, mozarella, and pepperoni"
-          photoName="mcdo_icon/Deliver5.jpeg"
-          optionName="Download the McDelivery PH App"
-        />
-        <Pizza
-          name="Pizza Prosciutto"
-          ingredients="Tomato, mozarella, ham, aragula, and burrata cheese"
-          photoName="mcdo_icon/Deliver6.jpeg"
-          optionName="Charity"
-        />
+        {mcdoData.map((mcdo_dat) => (
+          <Pizza mcdoDatObj={mcdo_dat} key={mcdo_dat.name} />
+        ))}
       </div>
     </div>
   );
